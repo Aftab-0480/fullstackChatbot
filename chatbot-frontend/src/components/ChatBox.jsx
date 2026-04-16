@@ -3,7 +3,7 @@ import Message from "./Message";
 
 const ChatBox = ({ messages }) => {
   return (
-    <div style={{ border: "1px solid #ccc", height: "300px", overflowY: "scroll", padding: "10px" }}>
+    <div className="chatbox">
       {messages.map((msg, index) => (
         <Message key={index} sender={msg.sender} text={msg.text} />
       ))}

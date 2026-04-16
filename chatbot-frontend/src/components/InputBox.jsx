@@ -9,16 +9,14 @@ const InputBox = ({ onSend }) => {
   };
 
   return (
-    <div style={{ marginTop: "10px" }}>
+    <div className="input-container">
       <input
         type="text"
         value={text}
         onChange={(e) => setText(e.target.value)}
-        style={{ width: "70%", padding: "8px" }}
       />
-      <button onClick={handleSend} style={{ padding: "8px" }}>
-        Send
-      </button>
+      <button onClick={handleSend}>Send</button>
+
     </div>
   );
 };

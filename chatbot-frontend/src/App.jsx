@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import ChatBox from "./components/ChatBox";
 import InputBox from "./components/InputBox";
+import "./App.css";
 
 function App() {
   const [messages, setMessages] = useState([]);
@@ -35,12 +36,12 @@ function App() {
   };
 
   return (
-    <div style={{ padding: "20px" }}>
-      <h2>Chatbot</h2>
-      <ChatBox messages={messages} />
-      <InputBox onSend={sendMessage} />
-    </div>
-  );
+  <div className="container">
+    <h2>Chatbot</h2>
+    <ChatBox messages={messages} />
+    <InputBox onSend={sendMessage} />
+  </div>
+);
 }
 
 export default App;
